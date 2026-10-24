@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Village Adventure</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loading">World loading...</div>
+
+  <div id="menu">
+    <h1>Minecraft Village</h1>
+    <p>Village • Ores • Mining • Building</p>
+    <button id="play">PLAY GAME</button>
+    <p>WASD: Move | Mouse: Look | Space: Jump</p>
+    <p>Left Click: Mine | Right Click: Build | E: Trade</p>
+  </div>
+
+  <div id="hud">
+    <div id="position">Village Spawn</div>
+    <div id="target">Looking: None</div>
+    <div id="inventory">Inventory</div>
+    <div id="armor">Iron Armor Equipped</div>
+    <div id="crosshair">+</div>
+    <div id="help">WASD Move • Space Jump • E Trade</div>
+    <div id="message"></div>
+    <div id="hotbar"></div>
+  </div>
+
+  <div id="trade">
+    <h3 id="tradeTitle">Villager Trade</h3>
+    <p id="tradeInfo">Emeralds: 5</p>
+    <div id="tradeOptions"></div>
+    <button id="closeTrade">Close</button>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
