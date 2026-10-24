@@ -1,0 +1,166 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  background: #87ceeb;
+}
+
+#loading,
+#menu {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: linear-gradient(#5ab6e8, #9ad56a);
+  z-index: 10;
+}
+
+#loading {
+  display: none;
+}
+
+#menu {
+  background: #0008;
+}
+
+h1 {
+  font-size: clamp(28px, 6vw, 52px);
+  text-shadow: 3px 4px #35452d;
+}
+
+button {
+  padding: 12px 20px;
+  color: white;
+  background: #558b2f;
+  border: 2px solid white;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #72ad40;
+}
+
+#hud {
+  display: none;
+  position: fixed;
+  inset: 0;
+  color: white;
+  text-shadow: 1px 2px #222;
+  pointer-events: none;
+  z-index: 3;
+}
+
+#position,
+#target,
+#inventory,
+#armor {
+  position: absolute;
+  top: 10px;
+  padding: 9px;
+  background: #0008;
+  border-radius: 5px;
+}
+
+#position { left: 10px; }
+#target { right: 10px; }
+#inventory { left: 10px; top: 52px; }
+#armor { right: 10px; top: 52px; }
+
+#crosshair {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 26px;
+}
+
+#help {
+  position: absolute;
+  left: 10px;
+  bottom: 90px;
+  padding: 8px;
+  background: #0007;
+  font-size: 12px;
+}
+
+#hotbar {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4px;
+  pointer-events: auto;
+  max-width: 98vw;
+}
+
+.slot {
+  width: 62px;
+  height: 62px;
+  padding: 3px;
+  color: white;
+  background: #222b;
+  border: 2px solid #aaa;
+  border-radius: 4px;
+  font-size: 10px;
+}
+
+.slot.selected {
+  border: 3px solid white;
+  background: #7c9d58dd;
+}
+
+#message {
+  display: none;
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0009;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#trade {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 260px;
+  padding: 20px;
+  color: white;
+  background: #303a2b;
+  border: 3px solid white;
+  text-align: center;
+  z-index: 8;
+  pointer-events: auto;
+}
+
+#trade button {
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .slot {
+    width: 39px;
+    height: 48px;
+    font-size: 9px;
+  }
+
+  #help {
+    bottom: 70px;
+    font-size: 10px;
+  }
+}
